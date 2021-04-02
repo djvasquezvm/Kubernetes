@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-run
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: nginx-run
+        image: nginx
+        imagePullPolicy: IfNotPresent
+
